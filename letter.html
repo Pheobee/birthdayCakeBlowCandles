@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Letter To You</title>
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto; /* allow scrolling */
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  filter: brightness(0.8);
+}
+
+.letter {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5); /* dark background for contrast */
+  color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  margin: 80px auto;
+  z-index: 1;
+}
+
+    .letter h1 {
+      margin-top: 0;
+    }
+
+    .letter p {
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .sticker {
+      margin-top: 40px;
+      width: 150px;
+    }
+  </style>
+
+</head>
+<body>
+
+    <div class="background-grid">
+        
+        <script>
+          for (let i = 2; i <= 43; i++) {
+            const img = document.createElement('img');
+            img.src = `img/photo_${i}_2025-07-05_07-39-12.jpg`;
+            document.write(img.outerHTML);
+          }
+        </script>
+      </div>
+    <div class="letter">
+        <h1>Dear Sitora,</h1>
+        <p>
+          On your special day, I just want to pause and remind you how truly wonderful you are, not just today, but every single day.
+        </p>
+        <p>
+          You are the kind of person who brings light into every room, your kindness, your quiet strength, and your willingness to help others are genuinely rare. There's something about the way you carry yourself, graceful, sweet, and radiant like sunshine that makes people feel at ease. You are endlessly cute, gorgeously unique, and remarkably inspiring.
+        </p>
+        <p>
+          Our friendship means more to me than words can express. You've become one of the most important people in my life, someone I admire deeply and trust entirely. The way you constantly push yourself to grow, to improve, to learn, is something I genuinely look up to. Whether you're working hard, exploring a new trail, or capturing beauty through your camera lens, you do it all with such passion and aesthetic precision.
+        </p>
+        <p>
+          You're brave not in loud or showy ways, but in how you always stand up for yourself and those you care about. You’re gentle yet strong, kind yet fierce when it matters. That strength reminds me of Anne's imagination and fire, Jo’s ambition and independence, and Elizabeth Bennet’s unapologetic wit. You embody all their best traits with your own luxurious twist.
+        </p>
+        <p>
+          Your love for reading, your eye for detail, your appreciation of beautiful things, your fierce loyalty, and your constant drive to become a better version of yourself — all of these make you so special. Whether you're curled up with a good book or organizing the world around you with elegance, you are authentically you and that’s a gift to everyone lucky enough to know you.
+        </p>
+        <p>
+          Thank you for being the beautiful soul that you are. I hope this year brings you as much joy, magic, and warmth as you bring to the people around you. You deserve everything good the world has to offer.
+        </p>
+        <p>
+          With love and admiration,<br>
+          Your always loving and weird friend, Sabrina
+        </p>
+      </div>
+      <div style="display: flex; justify-content: center; gap: 20px;">
+          <img style="height: 250px;" src="./img/sticker.webp" alt="">
+          <img style="height: 250px;" src="./img/sticker.webp" alt="">
+          <img style="height: 250px;" src="./img/sticker.webp" alt="">
+          <img style="height: 250px;" src="./img/sticker.webp" alt="">
+          <img style="height: 250px;" src="./img/sticker.webp" alt="">
+
+      </div>
+      
+</body>
+</html>
