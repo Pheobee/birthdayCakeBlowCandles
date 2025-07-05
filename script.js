@@ -71,13 +71,28 @@
     function showPopup() {
       const popup = document.createElement("div");
       popup.className = "popup";
-      popup.innerText = `Happy birthday, ${name}!`;
-      document.body.appendChild(popup);
+      popup.innerHTML = `
+      Happy birthday, ${name}!
+      <br>
+      <button onclick="location.href='letter.html'" style="
+        margin-top: 20px;
+        padding: 12px 24px;
+        background: linear-gradient(45deg, #ff69b4, #ff85a2);
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        💌 A letter to you
+      </button>
+    `;
+          document.body.appendChild(popup);
       throwConfetti();
-      setTimeout(() => {
-        popup.remove();
-        resetCake();
-      }, 5000);
+      document.getElementById('bname').innerText = document.getElementById("nameInput")?.value || "you";
     }
 
     function throwConfetti() {
@@ -91,12 +106,6 @@
         document.body.appendChild(confetti);
         setTimeout(() => confetti.remove(), 4000);
       }
-    }
-
-    function resetCake() {
-      document.querySelectorAll(".candle").forEach(el => el.remove());
-      counter = 0;
-      counterEl.innerText = counter;
     }
 
     enableMicrophone();
